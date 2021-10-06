@@ -1,0 +1,9 @@
+<li [class.completed]="todo.completed" [class.editing]="editing">
+  <div class="view">
+    <input class="toggle" [formControl]="chkCompleted" type="checkbox">
+    <label (dblclick)="edit()">{{todo.text}}</label>
+    <button class="destroy" (click)="delete()"></button>
+  </div>
+  <input type="text" [formControl]="txtInput" (blur)="endEdition()" #inputElement class="edit"
+    value="Create a TodoMVC template">
+</li>
